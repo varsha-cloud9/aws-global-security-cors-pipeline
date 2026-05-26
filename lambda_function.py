@@ -1,6 +1,7 @@
 import json
 import boto3
 import urllib.parse
+import os
 
 # Connect to AWS structural frameworks across regions
 s3_client = boto3.client('s3')
@@ -52,7 +53,7 @@ def lambda_handler(event, context):
         # 3. DISPATCH GLOBAL ALERT NOTIFICATION
         alert_msg = f"CRITICAL DEVSECOPS ALERT\n\nA malicious payload was intercepted across your global architecture.\n\nFile: {file_key}\nStatus: Purged from Primary ({PRIMARY_LANDING}) and Secondary Backup ({SECONDARY_BACKUP}). Asset safely quarantined."
         sns_client.publish(
-            TopicArn="arn:aws:sns:us-east-1:222557381955:GlobalSecurityAlertsTopic", # 👈 REPLACE THIS WITH YOUR SNS ARN STRING
+            TopicArn="TopicArn=os.environ['SNS_TOPIC_ARN']", # 👈 REPLACE THIS WITH YOUR SNS ARN STRING
             Message=alert_msg,
             Subject="⚠️ Global Infrastructure Security Violation"
         )
