@@ -11,3 +11,5 @@ An advanced, enterprise-grade cloud pipeline designed to achieve multi-region hi
 ## 📊 Key Cloud Metrics & Competitive Design Wins
 * **Near-Zero RTO (Recovery Time Objective):** Achieved robust backup continuity by leveraging asynchronous hardware replication channels.
 * **Automated Multi-Region Threat Mitigation:** Engineered to instantly trace, identify, and eliminate malicious elements across multiple target endpoints in under 3 seconds.
+## 🏗️ Architecture Diagram
+![Architecture](architecture.png)
