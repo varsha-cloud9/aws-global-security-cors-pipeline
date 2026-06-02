@@ -291,4 +291,23 @@ Varsha Wananje
 
 GitHub Repository:
 
+## How to Deploy
+
+### Prerequisites
+
+- AWS Account
+- AWS CLI configured
+- AWS SAM CLI installed
+
+### Deployment Steps
+
+```bash
+pip install aws-sam-cli
+sam build
+sam deploy --guided
+```
+
+Follow the prompts during deployment and provide the required stack configuration values.
+
+
 [https://github.com/varsha-cloud9/aws-global-security-pipeline](https://github.com/varsha-cloud9/aws-global-security-pipeline)

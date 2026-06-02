@@ -7,7 +7,7 @@ import os
 s3_client = boto3.client('s3')
 sns_client = boto3.client('sns')
 
-# Bucket Names
+# Bucket names use project-specific suffixes for uniqueness in shared AWS environments.
 PRIMARY_LANDING = "untrusted-landing-primary-pc-11"
 SECONDARY_BACKUP = "dr-backup-vault-secondary-pc-11"
 QUARANTINE_ZONE = "quarantine-zone-primary-pc-11"
